@@ -1,0 +1,6 @@
+{
+  "name": "AI Complaint Classifier & Technician Allocator",
+  "description": "Final-year B.Tech AI/ML project featuring an AI text classifier (TF-IDF + SVM) for appliance complaints, rule-based price estimation, and intelligent Haversine technician allocation.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

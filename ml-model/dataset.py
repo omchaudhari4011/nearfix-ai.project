@@ -1,0 +1,152 @@
+"""
+Dataset for AI-Powered Complaint Classification
+Categories:
+- cooling_issue
+- gas_leak
+- noise_issue
+- power_issue
+- remote_issue
+- water_leakage
+- installation
+Total: 120+ labeled complaint examples covering AC-related issues.
+"""
+
+TRAINING_DATA = [
+    # 1. cooling_issue (18 samples)
+    {"text": "My air conditioner is blowing warm air instead of cold air.", "category": "cooling_issue"},
+    {"text": "The room temperature is not dropping even when set to 18 degrees.", "category": "cooling_issue"},
+    {"text": "AC compressor runs continuously but there is barely any cooling in the bedroom.", "category": "cooling_issue"},
+    {"text": "Airflow from the split AC unit is completely warm and humid.", "category": "cooling_issue"},
+    {"text": "AC is running but it takes more than 4 hours to chill a small room.", "category": "cooling_issue"},
+    {"text": "No cold breeze coming from the air vents, just normal fan room temperature air.", "category": "cooling_issue"},
+    {"text": "Cooling efficiency has dropped drastically over the past week.", "category": "cooling_issue"},
+    {"text": "Compressor cuts off after 2 minutes and cooling stops completely.", "category": "cooling_issue"},
+    {"text": "Air conditioner does not maintain the set temperature in hot weather.", "category": "cooling_issue"},
+    {"text": "Blower fan is circulating air but zero cooling effect inside.", "category": "cooling_issue"},
+    {"text": "The AC takes forever to cool the living room and remains stuffy.", "category": "cooling_issue"},
+    {"text": "Very weak cooling output despite cleaning air filters yesterday.", "category": "cooling_issue"},
+    {"text": "Split AC indoor unit throws hot air when cooling mode is selected.", "category": "cooling_issue"},
+    {"text": "Inverter AC is not cooling properly and room remains warm.", "category": "cooling_issue"},
+    {"text": "Cool air is not coming out of the AC louvers at all.", "category": "cooling_issue"},
+    {"text": "The cooling sensation is negligible even on turbo mode.", "category": "cooling_issue"},
+    {"text": "AC outdoor condenser unit turns on but indoor unit blows ambient air.", "category": "cooling_issue"},
+    {"text": "Chilling effect is completely absent from my 1.5 ton split AC.", "category": "cooling_issue"},
+
+    # 2. gas_leak (17 samples)
+    {"text": "There is a hissing sound coming from the copper pipes and cooling has stopped.", "category": "gas_leak"},
+    {"text": "Smell of chemical freon gas around the outdoor AC unit.", "category": "gas_leak"},
+    {"text": "Refrigerant gas has completely leaked out, copper pipes have frost on them.", "category": "gas_leak"},
+    {"text": "Ice formation visible on the evaporator coils due to low gas pressure.", "category": "gas_leak"},
+    {"text": "Technician previously filled gas but the refrigerant leaked again within 3 days.", "category": "gas_leak"},
+    {"text": "Gas leakage detected near the flare nut joint of the split air conditioner.", "category": "gas_leak"},
+    {"text": "Continuous hissing gas leak noise from the outdoor compressor unit.", "category": "gas_leak"},
+    {"text": "Refrigerant level is zero and AC coils are freezing over with thick frost.", "category": "gas_leak"},
+    {"text": "Suspicious oily residue on copper pipes indicating freon gas leak.", "category": "gas_leak"},
+    {"text": "AC gas pressure is critically low, cooling stopped suddenly overnight.", "category": "gas_leak"},
+    {"text": "Gas discharge pipe is freezing into solid ice and giving foul smell.", "category": "gas_leak"},
+    {"text": "Pungent refrigerant chemical odor coming through the air vents.", "category": "gas_leak"},
+    {"text": "R32 gas refilling required due to puncture in cooling coil.", "category": "gas_leak"},
+    {"text": "Hissing noise followed by loss of all cooling indicates a refrigerant breach.", "category": "gas_leak"},
+    {"text": "Copper tubing has a pinhole leak and freon gas has escaped.", "category": "gas_leak"},
+    {"text": "Ice forming on suction line due to severe gas loss in the system.", "category": "gas_leak"},
+    {"text": "Complete loss of refrigerant gas after shifting and reinstallation.", "category": "gas_leak"},
+
+    # 3. noise_issue (18 samples)
+    {"text": "Loud rattling and vibrating sound coming from the indoor AC blower fan.", "category": "noise_issue"},
+    {"text": "High pitched screeching squealing noise whenever the AC fan runs on high.", "category": "noise_issue"},
+    {"text": "Severe buzzing and humming noise originating from the outdoor compressor.", "category": "noise_issue"},
+    {"text": "Indoor AC unit makes a heavy banging noise when turned on.", "category": "noise_issue"},
+    {"text": "Blower wheel seems unbalanced and creates abnormal grinding sound.", "category": "noise_issue"},
+    {"text": "Constant clicking noise coming from the indoor unit swing flap motor.", "category": "noise_issue"},
+    {"text": "Tremendous vibration shaking the bedroom wall when compressor engages.", "category": "noise_issue"},
+    {"text": "AC makes an unbearable thumping sound like something is loose inside.", "category": "noise_issue"},
+    {"text": "Metal screeching against metal sound coming from the outdoor condenser fan.", "category": "noise_issue"},
+    {"text": "Unusual clicking and crackling sounds coming from the front panel louvers.", "category": "noise_issue"},
+    {"text": "Fan motor bearings are worn out causing severe drone and rumble.", "category": "noise_issue"},
+    {"text": "Outdoor unit makes extreme noise disturbing neighbors at night.", "category": "noise_issue"},
+    {"text": "Buzzing electrical noise near the indoor unit circuit board.", "category": "noise_issue"},
+    {"text": "Loud ticking sound every few seconds while the air conditioner is running.", "category": "noise_issue"},
+    {"text": "Rattling noise from the loose front grill whenever fan is running.", "category": "noise_issue"},
+    {"text": "Strange whistling wind noise coming from the internal air duct.", "category": "noise_issue"},
+    {"text": "Vibration noise from mounting bracket that is shaking vigorously.", "category": "noise_issue"},
+    {"text": "Continuous whirring friction noise inside the split AC casing.", "category": "noise_issue"},
+
+    # 4. power_issue (18 samples)
+    {"text": "AC is completely dead and does not turn on at all.", "category": "power_issue"},
+    {"text": "Turning on the air conditioner immediately trips the main home MCB circuit breaker.", "category": "power_issue"},
+    {"text": "Display LED lights are dead and no beep sound when switching on power.", "category": "power_issue"},
+    {"text": "AC powers off randomly after running for 5 to 10 minutes.", "category": "power_issue"},
+    {"text": "Power button on the indoor unit is unresponsive, stabilizer showing red error light.", "category": "power_issue"},
+    {"text": "Voltage fluctuation caused the AC PCB board to spark and stop working.", "category": "power_issue"},
+    {"text": "Air conditioner does not receive power from the electrical socket.", "category": "power_issue"},
+    {"text": "Circuit breaker trips with a loud spark whenever compressor tries to start.", "category": "power_issue"},
+    {"text": "Power indicator light blinks rapidly in error code pattern and unit won't start.", "category": "power_issue"},
+    {"text": "AC power cord is overheating and burning smell coming from plug point.", "category": "power_issue"},
+    {"text": "Sudden blackout on the AC display screen, unit completely shut down.", "category": "power_issue"},
+    {"text": "Short circuit in the outdoor unit wiring causing electrical trips.", "category": "power_issue"},
+    {"text": "Indoor unit fan turns on but main unit loses power when cooling is initiated.", "category": "power_issue"},
+    {"text": "Unit refuses to boot up, stabilizer relay clicking without supplying power.", "category": "power_issue"},
+    {"text": "Blown capacitor or fuse inside the AC electrical supply box.", "category": "power_issue"},
+    {"text": "No power supply reaching the indoor split AC unit.", "category": "power_issue"},
+    {"text": "AC keeps shutting down and rebooting in a continuous power cycle.", "category": "power_issue"},
+    {"text": "Burned circuit board PCB prevented the unit from powering on.", "category": "power_issue"},
+
+    # 5. remote_issue (17 samples)
+    {"text": "AC remote control is not responding even after replacing with brand new batteries.", "category": "remote_issue"},
+    {"text": "Remote display screen is totally blank and cannot adjust temperature.", "category": "remote_issue"},
+    {"text": "Indoor unit infrared sensor does not receive commands from the remote.", "category": "remote_issue"},
+    {"text": "Remote buttons are stuck and temperature setting won't change from 24 degrees.", "category": "remote_issue"},
+    {"text": "Cannot switch AC modes between cool, fan, and dry using the controller.", "category": "remote_issue"},
+    {"text": "AC remote only works from a distance of less than 2 inches from the sensor.", "category": "remote_issue"},
+    {"text": "Swing button and timer button on the remote control have stopped functioning.", "category": "remote_issue"},
+    {"text": "Remote control screen shows garbage characters and lock symbol won't unlock.", "category": "remote_issue"},
+    {"text": "Lost the original AC remote control and need a replacement or sensor check.", "category": "remote_issue"},
+    {"text": "IR receiver LED on the indoor unit does not register button presses.", "category": "remote_issue"},
+    {"text": "Remote is transmitting infrared light but air conditioner does not beep or respond.", "category": "remote_issue"},
+    {"text": "Power on/off button on the handheld remote control is broken.", "category": "remote_issue"},
+    {"text": "Remote backlight is dead and LCD screen is faded making buttons unusable.", "category": "remote_issue"},
+    {"text": "Unable to turn on the AC because the remote control has stopped pairing.", "category": "remote_issue"},
+    {"text": "Remote control keypad is unresponsive after battery leakage occurred.", "category": "remote_issue"},
+    {"text": "Cannot control airflow direction or fan speed with the remote handset.", "category": "remote_issue"},
+    {"text": "AC display doesn't change when pressing temperature down button on remote.", "category": "remote_issue"},
+
+    # 6. water_leakage (18 samples)
+    {"text": "Water is continuously dripping and leaking from the indoor AC unit onto the floor.", "category": "water_leakage"},
+    {"text": "Drain pipe of the split AC seems blocked and water is overflowing from tray.", "category": "water_leakage"},
+    {"text": "Water droplets spraying out of the air blower vent into the room.", "category": "water_leakage"},
+    {"text": "Severe water leakage damaging the bedroom wall paint right beneath the unit.", "category": "water_leakage"},
+    {"text": "Condensate drain tray is cracked causing water seepage along the wall.", "category": "water_leakage"},
+    {"text": "Puddle of water collecting underneath the indoor air conditioning unit.", "category": "water_leakage"},
+    {"text": "Water pouring down from the corner of the AC when running for an hour.", "category": "water_leakage"},
+    {"text": "Drainage hose is disconnected or choked with algae causing overflow.", "category": "water_leakage"},
+    {"text": "Ice melting inside the indoor unit and water splashing across furniture.", "category": "water_leakage"},
+    {"text": "Continuous stream of water escaping through the bottom vents of the AC.", "category": "water_leakage"},
+    {"text": "Indoor evaporator drain pan overflowing with dirty condensate water.", "category": "water_leakage"},
+    {"text": "Moisture and heavy water dripping along the copper pipe insulation.", "category": "water_leakage"},
+    {"text": "Floor under the split AC is flooded due to backflow from outlet pipe.", "category": "water_leakage"},
+    {"text": "Water leaking from behind the wall-mounted indoor unit frame.", "category": "water_leakage"},
+    {"text": "Clogged AC drain line causing condensate to drip down the wallpaper.", "category": "water_leakage"},
+    {"text": "Drops of water falling from the front swing flap every 10 seconds.", "category": "water_leakage"},
+    {"text": "AC condensates heavily and leaks inside the bedroom rather than outside.", "category": "water_leakage"},
+    {"text": "Water leakage problem from indoor unit after continuous 3 hours usage.", "category": "water_leakage"},
+
+    # 7. installation (18 samples)
+    {"text": "Need professional unboxing and wall installation for brand new 1.5 ton split AC.", "category": "installation"},
+    {"text": "Want to relocate my existing air conditioner to a new flat and fix outdoor brackets.", "category": "installation"},
+    {"text": "Dismantling old window AC and installing new inverter split unit in living room.", "category": "installation"},
+    {"text": "Require copper piping, drain pipe routing, and outdoor stand mounting installation.", "category": "installation"},
+    {"text": "Need outdoor unit wall stand bracket fixed on external balcony wall.", "category": "installation"},
+    {"text": "Uninstallation service needed for two split air conditioners before house moving.", "category": "installation"},
+    {"text": "New AC delivered today, need certified technician for complete setup and demo.", "category": "installation"},
+    {"text": "Reinstallation of indoor and outdoor AC units after apartment renovation.", "category": "installation"},
+    {"text": "Core cutting in brick wall and copper pipe fitting for new AC installation.", "category": "installation"},
+    {"text": "Need to extend copper pipe by 5 meters and mount outdoor compressor unit.", "category": "installation"},
+    {"text": "Mounting bracket installation and vacuuming of system before initial startup.", "category": "installation"},
+    {"text": "Removal of old faulty AC and mounting of newly purchased Daikin split AC.", "category": "installation"},
+    {"text": "Full split AC installation including electrical wiring, MCB connection, and stand.", "category": "installation"},
+    {"text": "Need skilled technician to install window AC into wooden window frame.", "category": "installation"},
+    {"text": "Shift outdoor condenser unit from ground floor to rooftop terrace.", "category": "installation"},
+    {"text": "Complete installation service requested for new multi-split system in office.", "category": "installation"},
+    {"text": "AC uninstallation from old address and reinstallation at new home.", "category": "installation"},
+    {"text": "Fixing outdoor unit vibration pads and wall mounting frame for new AC.", "category": "installation"}
+]
